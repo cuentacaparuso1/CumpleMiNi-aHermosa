@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Miii 🤍</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="playlist-player"></audio>
+
+    <div class="app-container">
+
+        <section id="screen-lock" class="screen active">
+            <div class="lock-box">
+                <div class="lock-icon">🔒</div>
+                <h2>Sistema de Seguridad</h2>
+                <p>Ingresa la fecha en la que nos conocimos para desbloquear nuestra historia.</p>
+                <p class="hint">(Formato: DD - MM - AA)</p>
+                
+                <div class="dials">
+                    <input type="number" id="dial1" class="dial" value="00" min="0" max="99">
+                    <span class="separator">-</span>
+                    <input type="number" id="dial2" class="dial" value="00" min="0" max="99">
+                    <span class="separator">-</span>
+                    <input type="number" id="dial3" class="dial" value="00" min="0" max="99">
+                </div>
+                <button id="btn-unlock" class="cute-btn">Desbloquear 🗝️</button>
+                <p id="lock-error" class="hidden">Clave incorrecta, mi niña...</p>
+            </div>
+        </section>
+
+        <section id="screen-rose" class="screen hidden">
+            <div class="rose-container">
+                <div id="the-rose" class="pixel-rose">🌱</div>
+                <h1 id="rose-message" class="hidden glow-text">Feliz cumpleaños para la niña más hermosa de todo el mundo, Miii. 🌸🤍</h1>
+                <button id="btn-start-journey" class="cute-btn hidden">Entrar a mi mundo</button>
+            </div>
+        </section>
+
+        <section id="screen-hub" class="screen hidden">
+            
+            <div class="main-content">
+                
+                <div id="tab-perfil" class="tab active">
+                    <div class="profile-header">
+                        <h2>Mi Niña Hermosa 🎂</h2>
+                    </div>
+                    
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <img src="portada.png" alt="Miii" onerror="this.src='https://placehold.co/200x200/ffb7c5/fff?text=Portada.png'">
+                            <span class="favorite-badge">❤️ La dueña de mi corazón</span>
+                        </div>
+                        
+                        <div class="profile-info">
+                            <div class="info-row"><span>Nombre:</span> <strong>Miii 🤍</strong></div>
+                            <div class="info-row"><span>Cumpleaños:</span> <strong>21 de Febrero 🍰</strong></div>
+                            <div class="info-row"><span>Signo:</span> <strong>Piscis ♓</strong></div>
+                            <div class="info-row"><span>Estado:</span> <strong style="color: #ff69b4;">Mi Novia ✨</strong></div>
+                            
+                            <div class="stats-box">
+                                <div class="stat">
+                                    <span>❤️ Amor por ti</span>
+                                    <div class="bar-bg"><div class="bar-fill" style="width: 100%;"></div></div>
+                                </div>
+                                <div class="stat">
+                                    <span>🔥 Ganas de hacerte cosas jsjs</span>
+                                    <div class="bar-bg"><div class="bar-fill" style="width: 100%;"></div></div>
+                                </div>
+                                <div class="stat">
+                                    <span>🌸 Ternura</span>
+                                    <div class="bar-bg"><div class="bar-fill" style="width: 100%;"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-historia" class="tab hidden">
+                    <h2 class="section-title">✨ Nuestra Historia</h2>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="t-icon">📱</div>
+                            <div class="t-content">
+                                <span class="t-date">El Inicio</span>
+                                <h3>Cómo nos conocimos</h3>
+                                <p>Tú decías que eras tímida y que te costaba socializar. Yo lo vi y pensé que tal vez no tendría oportunidad, pero te escribí... ¡Y me alegra tanto haberlo hecho! Porque conocí a la niña más linda de todo el mundo.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="t-icon">🔥</div>
+                            <div class="t-content">
+                                <span class="t-date">Nuestras Rachas</span>
+                                <h3>Momentos Únicos</h3>
+                                <p>Eres una chica linda, tierna y a veces tremenda, pero todo eso de ti me encanta. Eres mi niña enana, mi nena jsjsj. Ya llevamos 12 días de racha hablando sin fallar ni un solo día... y también racha sobre la otra cosita~ 😏🤍</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="t-icon">🎂</div>
+                            <div class="t-content">
+                                <span class="t-date">21 de Febrero</span>
+                                <h3>Nuevo Año de Vida Alcanzado</h3>
+                                <p>Estoy muy feliz de celebrar esto contigo. Deseo que te vaya bien en toda tu vida y en tus metas, y quiero que sepas que siempre estaré ahí para ti en cada paso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-galeria" class="tab hidden">
+                    <h2 class="section-title">📸 Recuerdos Bloqueados</h2>
+                    <p class="text-center" style="margin-bottom:15px; font-size: 0.9rem;">(Abre las 14 fotos para revelar tu carta secreta)</p>
+                    
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="gallery-progress" style="width: 0%;"></div>
+                        <p><span id="photos-viewed">0</span> / 14 fotos vistas</p>
+                    </div>
+                    
+                    <div class="gallery-grid">
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen1.png" onerror="this.src='https://placehold.co/150?text=img1'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen2.png" onerror="this.src='https://placehold.co/150?text=img2'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen3.png" onerror="this.src='https://placehold.co/150?text=img3'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen4.png" onerror="this.src='https://placehold.co/150?text=img4'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen5.png" onerror="this.src='https://placehold.co/150?text=img5'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen6.png" onerror="this.src='https://placehold.co/150?text=img6'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen7.png" onerror="this.src='https://placehold.co/150?text=img7'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen8.png" onerror="this.src='https://placehold.co/150?text=img8'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen9.png" onerror="this.src='https://placehold.co/150?text=img9'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen10.png" onerror="this.src='https://placehold.co/150?text=img10'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen11.png" onerror="this.src='https://placehold.co/150?text=img11'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen12.png" onerror="this.src='https://placehold.co/150?text=img12'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen13.png" onerror="this.src='https://placehold.co/150?text=img13'"></div>
+                        <div class="g-item locked"><div class="overlay-lock">🔒</div><img src="imagen14.png" onerror="this.src='https://placehold.co/150?text=img14'"></div>
+                    </div>
+                </div>
+
+                <div id="tab-musica" class="tab hidden">
+                    <h2 class="section-title">🎵 Canciones para Ti</h2>
+                    <p class="text-center" style="margin-bottom:15px; font-size: 0.9rem;">(Presiona para escuchar)</p>
+                    
+                    <div class="spotify-card">
+                        <div class="s-header">
+                            <div class="s-logo">Spotify</div>
+                            <img src="portada.png" onerror="this.src='https://placehold.co/100'" class="s-cover">
+                            <div class="s-info">
+                                <h3>Para mi reyna</h3>
+                                <p>5 Tracks • Dedicados con amor</p>
+                            </div>
+                        </div>
+                        <ul class="s-tracks" id="track-list">
+                            <li data-src="musica1.mp3"><span class="play-icon">▶</span> <span class="t-title">Here's Your Perfect</span> <span class="t-artist">Jamie Miller</span></li>
+                            <li data-src="musica2.mp3"><span class="play-icon">▶</span> <span class="t-title">Only</span> <span class="t-artist">Lee Hi</span></li>
+                            <li data-src="musica3.mp3"><span class="play-icon">▶</span> <span class="t-title">love</span> <span class="t-artist">wave to earth</span></li>
+                            <li data-src="musica4.mp3"><span class="play-icon">▶</span> <span class="t-title">I Like You The Most</span> <span class="t-artist">Cover</span></li>
+                            <li data-src="musica5.mp3"><span class="play-icon">▶</span> <span class="t-title">LDR</span> <span class="t-artist">Shoti</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="tab-carta" class="tab hidden">
+                    
+                    <div id="letter-lock-screen" class="locked-message-overlay">
+                        <div style="text-align: center;">
+                            <span style="font-size: 4rem;">🔒</span>
+                            <h3>Carta Bloqueada</h3>
+                            <p>Primero debes ver las 14 fotos de la Galería para desbloquear este mensaje.</p>
+                        </div>
+                    </div>
+
+                    <div id="the-real-letter" class="letter-box blur-effect">
+                        <div class="letter-header">
+                            💌 Para_Mi_Niña_Hermosa.txt
+                        </div>
+                        <div class="letter-body">
+                            <p>Estoy tan feliz de haberte conocido. Cada día, después de una jornada cansada, escribirte me hace muy feliz y me alegra por completo el día.</p>
+                            <p>A veces nos amanecemos o nos quedamos hasta muy tarde... y estar contigo es lo que más quiero. Amo todas tus debilidades, tus inseguridades, amo todo de ti y siempre lo haré, mi niña linda hermosa.</p>
+                            <p>Estaré contigo siempre (o hasta el día que me lo permitas). Y bueno... a veces también me provocas ganas y más ganas de hacerte cosas y tratarte bien jsjsj.</p>
+                            <p>Te amo mucho y siempre lo haré. Eres mi niña hermosa, mi reyna, mi dueña. ❤️</p>
+                            <p class="signature">— Siempre tuyo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-final" class="tab hidden">
+                    <div class="final-container">
+                        <h2 class="glow-text" style="color:#ff69b4;">¡Una última cosa!</h2>
+                        
+                        <div class="question-box" id="question-box">
+                            <p>¿Prometes que estaremos juntos por muchísimo tiempo y me dejarás seguir haciéndote feliz?</p>
+                            <div class="buttons-yes-no">
+                                <button id="btn-yes" class="cute-btn">¡SÍ, LO PROMETO! 💖</button>
+                                <button id="btn-no" class="cute-btn-outline">Mmm no sé...</button>
+                            </div>
+                        </div>
+
+                        <div id="gift-box-section" class="hidden">
+                            <h3>¡Sabía que dirías que sí! ✨</h3>
+                            <p>Aquí tienes tus regalos finales:</p>
+                            
+                            <div class="external-gift" style="margin-bottom: 30px;">
+                                <a href="https://dedicapag.com/u/699a479679baf" target="_blank" class="cute-btn" style="text-decoration: none; display: inline-block;">🎁 Abrir Sorpresa Web</a>
+                                <p style="font-size: 0.9rem; margin-top: 10px;">(Ábrelo y luego vuelve aquí para continuar)</p>
+                            </div>
+
+                            <div class="video-gift" style="background: #111; padding: 25px; border-radius: 15px; border: 2px solid #ff4d6d;">
+                                <h4>Cada momento pienso en ti 🤍</h4>
+                                <p style="font-size: 1rem; margin-bottom: 20px;">Lee la letra, literal me siento así y aprecio siempre el tiempo contigo.</p>
+                                
+                                <a href="https://www.youtube.com/watch?v=3wLIpzASW4E&list=RD3wLIpzASW4E&start_radio=1" target="_blank" class="youtube-btn" style="text-decoration: none; display: inline-block;">
+                                    ▶ Ver Dedicatoria en YouTube
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <nav class="bottom-nav">
+                <button class="nav-icon active" data-target="tab-perfil">👤<span>Perfil</span></button>
+                <button class="nav-icon" data-target="tab-historia">📖<span>Historia</span></button>
+                <button class="nav-icon" data-target="tab-galeria">📸<span>Galería</span></button>
+                <button class="nav-icon" data-target="tab-musica">🎵<span>Música</span></button>
+                <button class="nav-icon" data-target="tab-carta">💌<span>Carta</span></button>
+                <button class="nav-icon" data-target="tab-final">✨<span>Final</span></button>
+            </nav>
+
+        </section>
+
+    </div>
+
+    <div id="image-modal" class="modal hidden">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="expanded-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
